@@ -1,54 +1,117 @@
 /* Add screen styles below */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #353535;
-    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    background-color: #F5F6F0;        
 }
 
-#hero {
-    background-color: #B5B5B5;
-    color: #353535;
-    margin: 0px;
-    padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 72px;
+.navbar{
+    background-color: #FF650B;
+    position: relative; 
+    height: 40px;
 }
 
-#intro{
-    margin: 0px;
-    width: 1010px;
-    text-align: center;
-    word-wrap: normal;
-    position: relative;
-    top: 50px;
-    left: 250px;
-    font-size: 72px;
+.logo {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+.navbar ul {
+    list-style-type: none;
+    padding-top: 5px;
 }
 
-.card{
-    display: flex;
-    margin: 0px;
+.navbar ul li {
+    display: inline-block; 
+    position: relative; 
+    margin-right: 10px;
+    font-size: 1em;
+    padding-top: 5px;
+}
+/* Uses a | as a bullet point */
+.navbar ul li::before {
+    content: "|"; 
+    position: absolute; 
+    left: -10px; 
 }
 
-h2 {
-    font-size: 48px;
-    margin: 0px;
-    padding-top: 120px;
+.navbar ul li:first-child::before {
+    content: ""; 
+}
+
+/*Removes the | for the new and login text in navbar. Total pain in the butt to figure this out by the way */
+.navbar ul li:nth-child(2)::before,
+.navbar ul li.offset::before {
+    content: "";
+}
+
+.navbar ul li.title h1 {
+    margin: 0;
+    font-size: 1em;
     
 }
 
-p{
-    width: 650px;
-    text-align: left;
-    word-wrap: normal;
-    margin: 0px;
-    padding-top: 35px;
-    font-size: 24px;
+.navbar ul li.offset {
+    float: right;
 }
 
-img {
-    padding-right: 35px;
-    padding-left: 250px;
-    padding-top: 120px;
+
+.forum dt{
+    margin: 0;
+    
+}
+
+.forum dd{
+    color: #83847F;
+    font-weight: 400;
+    font-size: .6em;
+    padding-bottom: 1em;
+
+}
+
+.forum dl{
+    color: #83847F;
+
+}
+
+h2{
+    color: #000000;
+    font-weight: 500;
+    font-size: 1em;
+    display: inline-block;
+    margin: 0;
+}
+
+p{
+    color: #83847F;
+    font-weight: 500;
+    font-size: .8em;
+    display: inline-block;
+    margin: 0;
+}
+
+.triangle {
+    position: relative;
+    display: inline-block;
+    margin-right: -5px;
+}
+
+.triangle::before {
+    position: relative;
+    color: #83847F;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent; 
+    border-right: 5px solid transparent; 
+    border-bottom: 10px solid #83847F; 
+    margin-right: 5px;
 }
